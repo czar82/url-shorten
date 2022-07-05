@@ -19,10 +19,6 @@ public class UrlMatchService {
     @Value( "${host}" )
     private String host;
 
-    public Iterable<UrlMatch> findAll() {
-        return urlMatchRepository.findAll();
-    }
-
     public UrlMatchDto saveUrl(UrlMatchDto urlMatchDto) {
         ModelMapper modelMapper = new ModelMapper();
         UrlMatch urlMatch = modelMapper.map(urlMatchDto, UrlMatch.class);
