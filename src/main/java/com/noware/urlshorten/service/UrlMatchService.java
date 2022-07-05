@@ -5,7 +5,6 @@ import com.noware.urlshorten.entities.UrlMatch;
 import com.noware.urlshorten.repositories.UrlMatchRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +14,6 @@ import java.util.function.Function;
 @RequiredArgsConstructor
 public class UrlMatchService {
 
-    @Autowired
     private final UrlMatchRepository urlMatchRepository;
 
     @Value( "${host}" )
